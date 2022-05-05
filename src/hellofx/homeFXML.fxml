@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #0af5d7;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="hellofx.HomeFXMLController">
+   <children>
+      <VBox layoutX="189.0" layoutY="130.0" prefHeight="262.0" prefWidth="198.0">
+         <children>
+            <Label text="From" />
+            <ComboBox prefWidth="150.0" />
+            <Label text="To" />
+            <ComboBox prefWidth="150.0" />
+         </children>
+      </VBox>
+      <HBox layoutX="161.0" layoutY="14.0" prefHeight="94.0" prefWidth="318.0">
+         <children>
+            <Label prefHeight="88.0" prefWidth="312.0" text="BD Travel">
+               <font>
+                  <Font name="Britannic Bold" size="48.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

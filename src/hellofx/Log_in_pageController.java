@@ -12,8 +12,6 @@ import java.util.ResourceBundle;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.TextField;
-
-
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -23,7 +21,6 @@ import javafx.scene.control.*;
 import javafx.stage.Stage;
 import javafx.stage.StageStyle;
 import hellofx.ConnectionClass;
-
 import java.io.IOException;
 import java.lang.ModuleLayer.Controller;
 import java.net.Socket;
@@ -65,17 +62,13 @@ public class Log_in_pageController implements Initializable {
                 pst.setString(2, pass);
                 resultSet = pst.executeQuery();
                 if (resultSet.next()) {
-
-
-                    Parent parent = FXMLLoader.load(getClass().getResource("helloFXML.fxml"));
+                    
+                    Parent parent = FXMLLoader.load(getClass().getResource("homeFXML.fxml"));
                     Scene scene = new Scene(parent);
                     Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
                     window.setScene(scene);
                     window.show();
                     window.setMaximized(false);
-
-
-
 
                 } else {
                     Alert alert = new Alert(Alert.AlertType.NONE);
@@ -89,10 +82,6 @@ public class Log_in_pageController implements Initializable {
 
             }
         }
-
-
-
-
     }
     
     @Override
