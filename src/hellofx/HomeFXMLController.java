@@ -22,6 +22,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
  * FXML Controller class
@@ -72,6 +73,8 @@ public class HomeFXMLController implements Initializable {
         dest1.getItems().add("Sylhet");
         dest1.getItems().add("Khulna");
         dest1.getItems().add("Rajshahi");
+        
+        
     }
 
     public void search(ActionEvent actionEvent)  {
@@ -105,12 +108,13 @@ public class HomeFXMLController implements Initializable {
                 rs.getTime(6),
                 rs.getString(8)));
 
-               tableview.setItems(data);
-                System.out.println(data);
-                System.out.println(source);
-
 
             }
+            service.setCellValueFactory(new PropertyValueFactory<>("service"));
+            fare.setCellValueFactory(new PropertyValueFactory<>("fare"));
+            dtime.setCellValueFactory(new PropertyValueFactory<>("dtime"));  
+            atime.setCellValueFactory(new PropertyValueFactory<>("atime"));
+            tableview.setItems(data);
         } catch(SQLException e){
             e.printStackTrace();
         }
