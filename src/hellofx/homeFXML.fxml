@@ -16,9 +16,9 @@
       <VBox layoutX="161.0" layoutY="90.0" prefHeight="167.0" prefWidth="189.0">
          <children>
             <Label text="From" />
-            <ComboBox fx:id="source" prefWidth="150.0" />
+            <ComboBox fx:id="source1" prefWidth="150.0" />
             <Label text="To" />
-            <ComboBox fx:id="dest" prefWidth="150.0" />
+            <ComboBox fx:id="dest1" prefWidth="150.0" />
             <Label prefHeight="24.0" prefWidth="82.0" text="Journey Date" />
             <DatePicker fx:id="date" />
          </children>
@@ -32,10 +32,10 @@
             </Label>
          </children>
       </HBox>
-      <Button layoutX="161.0" layoutY="257.0" mnemonicParsing="false" onAction="#getInformation" style="-fx-background-color: lime;" text="Find Bus" />
-      <TableView fx:id="table" layoutX="-1.0" layoutY="299.0" prefHeight="200.0" prefWidth="602.0">
+      <Button layoutX="161.0" layoutY="257.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: lime;" text="Find Bus" />
+      <TableView fx:id="tableview" layoutX="-1.0" layoutY="299.0" prefHeight="200.0" prefWidth="602.0">
         <columns>
-          <TableColumn fx:id="name" prefWidth="131.20001828670502" text="Name" />
+          <TableColumn fx:id="service" prefWidth="131.20001828670502" text="Name" />
           <TableColumn fx:id="fare" prefWidth="140.79998779296875" text="Price/Unit" />
             <TableColumn fx:id="dtime" prefWidth="173.5999755859375" text="Departure Time" />
             <TableColumn fx:id="atime" prefWidth="158.39999389648438" text="Arrival Time" />
