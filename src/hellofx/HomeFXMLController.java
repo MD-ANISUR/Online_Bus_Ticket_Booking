@@ -85,8 +85,8 @@ public class HomeFXMLController implements Initializable {
 
 
 
-        String source = source1.getSelectionModel().getSelectedItem().toString();
-        String dest = dest1.getSelectionModel().getSelectedItem().toString();
+        String source = (String) source1.getValue(); //source1.getSelectionModel().getSelectedItem().toString();
+        String dest = (String) dest1.getValue(); //dest1.getSelectionModel().getSelectedItem().toString();
         String Date = ((LocalDate)this.date.getValue()).format(DateTimeFormatter.ISO_LOCAL_DATE);
         ConnectionClass connectionClass = new ConnectionClass();
         Connection connection = connectionClass.getConnection();
@@ -107,6 +107,7 @@ public class HomeFXMLController implements Initializable {
 
                tableview.setItems(data);
                 System.out.println(data);
+                System.out.println(source);
 
 
             }
