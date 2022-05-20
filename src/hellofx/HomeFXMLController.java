@@ -116,6 +116,21 @@ public class HomeFXMLController implements Initializable {
     @FXML
     private Button bt_1;
     
+    @FXML
+    private Button rset;
+    
+    @FXML
+    private Button reset;
+    
+    @FXML
+    private Button book;
+    
+    @FXML
+    private Button cancel;
+    
+    @FXML
+    private Button proceed;
+    
     
     @FXML
     void A1(ActionEvent event) {

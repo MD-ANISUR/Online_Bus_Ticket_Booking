@@ -136,7 +136,16 @@
             <Label layoutX="309.0" layoutY="67.0" prefHeight="18.0" prefWidth="77.0" text="Date" />
             <Label layoutX="386.0" layoutY="67.0" prefHeight="18.0" prefWidth="159.0" />
             <Label layoutX="309.0" layoutY="95.0" prefHeight="18.0" prefWidth="77.0" text="Price" />
+
             <Label layoutX="378.0" layoutY="94.0" prefHeight="18.0" prefWidth="159.0" />
+
+            <Label fx:id="flabel" layoutX="379.0" layoutY="95.0" prefHeight="19.0" prefWidth="158.0" />
+            <Button fx:id="rset" layoutX="291.0" layoutY="138.0" mnemonicParsing="false" text="Reset" />
+            <Button fx:id="proceed" layoutX="415.0" layoutY="138.0" mnemonicParsing="false" text="Checkout" />
+            <Button fx:id="book" layoutX="360.0" layoutY="138.0" mnemonicParsing="false" text="Book" />
+            <Button fx:id="cancel" layoutX="494.0" layoutY="138.0" mnemonicParsing="false" text="Cancel" />
+            <Button fx:id="reset" layoutX="131.0" layoutY="138.0" mnemonicParsing="false" text="Refresh" />
+
          </children>
       </Pane>
    </children>
