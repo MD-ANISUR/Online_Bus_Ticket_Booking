@@ -21,8 +21,10 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.DatePicker;
+import javafx.scene.control.Label;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
+import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 
 /**
@@ -52,6 +54,16 @@ public class HomeFXMLController implements Initializable {
 
     @FXML
     private TableView<Service> tableview;
+            
+    public TextField txtname;
+    public TextField txtphone;
+    public TextField txtseat;
+    public Label sourcelabel;
+    public Label serlabel;
+    public Label totalfare;
+    public Label dlabel;
+    public Label datelabel;
+    public Label flabel;
     
     
     
