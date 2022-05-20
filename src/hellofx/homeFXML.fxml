@@ -6,12 +6,17 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="602.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="825.0" prefWidth="1239.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
    <children>
       <VBox layoutX="161.0" layoutY="90.0" prefHeight="167.0" prefWidth="189.0">
          <children>
@@ -41,5 +46,74 @@
             <TableColumn fx:id="atime" prefWidth="158.39999389648438" text="Arrival Time" />
         </columns>
       </TableView>
+      <Pane layoutX="766.0" layoutY="104.0" prefHeight="727.0" prefWidth="304.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;" styleClass="t2" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css">
+         <children>
+            <Button fx:id="bt_1" layoutX="24.0" layoutY="102.0" mnemonicParsing="false" onAction="#A1" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A1" />
+            <Button fx:id="a2" layoutX="83.0" layoutY="102.0" mnemonicParsing="false" onAction="#A2" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A2" />
+            <Button fx:id="B1" layoutX="24.0" layoutY="165.0" mnemonicParsing="false" onAction="#b1" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="B1" />
+            <Button fx:id="C1" layoutX="24.0" layoutY="223.0" mnemonicParsing="false" onAction="#c1" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="C1" />
+            <Button fx:id="D1" layoutX="24.0" layoutY="287.0" mnemonicParsing="false" onAction="#d1" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="D1" />
+            <Button layoutX="24.0" layoutY="349.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="E1" />
+            <Button layoutX="24.0" layoutY="417.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="F1" />
+            <Button layoutX="24.0" layoutY="481.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="G1" />
+            <Button layoutX="24.0" layoutY="541.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="H1" />
+            <Button fx:id="B2" layoutX="83.0" layoutY="165.0" mnemonicParsing="false" onAction="#b2" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="B2" />
+            <Button fx:id="C2" layoutX="83.0" layoutY="224.0" mnemonicParsing="false" onAction="#c2" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="C2" />
+            <Button fx:id="D2" layoutX="83.0" layoutY="287.0" mnemonicParsing="false" onAction="#d2" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="D2" />
+            <Button layoutX="83.0" layoutY="349.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="E2" />
+            <Button layoutX="83.0" layoutY="417.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="F2" />
+            <Button layoutX="181.0" layoutY="669.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="J4" />
+            <Button layoutX="24.0" layoutY="606.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="I1" />
+            <Button fx:id="A3" layoutX="176.0" layoutY="102.0" mnemonicParsing="false" onAction="#a3" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A3" />
+            <Button fx:id="A4" layoutX="233.0" layoutY="102.0" mnemonicParsing="false" onAction="#a4" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" styleClass="btn_seat" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A4" />
+            <Button fx:id="B3" layoutX="176.0" layoutY="166.0" mnemonicParsing="false" onAction="#b3" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="B3" />
+            <Button fx:id="B4" layoutX="233.0" layoutY="165.0" mnemonicParsing="false" onAction="#b4" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="B4" />
+            <Button fx:id="C3" layoutX="176.0" layoutY="226.0" mnemonicParsing="false" onAction="#c3" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="C3" />
+            <Button fx:id="C4" layoutX="233.0" layoutY="226.0" mnemonicParsing="false" onAction="#c4" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="C4" />
+            <Button fx:id="D3" layoutX="176.0" layoutY="287.0" mnemonicParsing="false" onAction="#d3" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="D3" />
+            <Button fx:id="D4" layoutX="233.0" layoutY="287.0" mnemonicParsing="false" onAction="#d4" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="D4" />
+            <Button layoutX="176.0" layoutY="346.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="E3" />
+            <Button layoutX="233.0" layoutY="345.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="E4" />
+            <Button layoutX="83.0" layoutY="481.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="G2" />
+            <Button layoutX="83.0" layoutY="606.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="I2" />
+            <Button layoutX="83.0" layoutY="541.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="H2" />
+            <Button layoutX="233.0" layoutY="669.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="J5" />
+            <Button layoutX="24.0" layoutY="669.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="J1" />
+            <Button layoutX="75.0" layoutY="669.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="J2" />
+            <Button layoutX="128.0" layoutY="669.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="J3" />
+            <Button layoutX="176.0" layoutY="418.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="F3" />
+            <Button layoutX="233.0" layoutY="418.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="F4" />
+            <Button layoutX="176.0" layoutY="481.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="G3" />
+            <Button layoutX="233.0" layoutY="481.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="G4" />
+            <Button layoutX="176.0" layoutY="547.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="H3" />
+            <Button layoutX="233.0" layoutY="547.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="H4" />
+            <Button layoutX="176.0" layoutY="606.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="I3" />
+            <Button layoutX="233.0" layoutY="606.0" mnemonicParsing="false" prefHeight="32.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" text="I4" />
+            <Button fx:id="red_btn" layoutX="19.0" layoutY="14.0" mnemonicParsing="false" prefHeight="13.0" prefWidth="30.0" style="-fx-background-color: #39FF14;" />
+            <Button fx:id="grn_btn" layoutX="19.0" layoutY="50.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="30.0" style="-fx-background-color: Red;" />
+            <Label layoutX="82.0" layoutY="18.0" text=": Available">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="82.0" layoutY="54.0" text=": Booked">
+               <font>
+                  <Font name="Bodoni MT Black" size="15.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="77.0" fitWidth="77.0" layoutX="185.0" layoutY="16.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../JavaApplication14/src/JavaApplication14/giphy.gif" />
+               </image>
+            </ImageView>
+         </children>
+         <effect>
+            <DropShadow height="33.46" radius="16.78" spread="0.59" width="35.66">
+               <color>
+                  <Color red="0.16862745583057404" green="1.0" blue="0.7647058963775635" />
+               </color>
+            </DropShadow>
+         </effect>
+      </Pane>
    </children>
 </AnchorPane>
