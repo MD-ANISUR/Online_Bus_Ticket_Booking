@@ -8,11 +8,10 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="825.0" prefWidth="1239.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="499.0" prefWidth="602.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
    <children>
       <VBox layoutX="161.0" layoutY="90.0" prefHeight="167.0" prefWidth="189.0">
          <children>
@@ -42,12 +41,5 @@
             <TableColumn fx:id="atime" prefWidth="158.39999389648438" text="Arrival Time" />
         </columns>
       </TableView>
-      <Pane layoutX="641.0" layoutY="83.0" prefHeight="544.0" prefWidth="251.0">
-         <children>
-            <Button layoutX="14.0" layoutY="129.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="80.0" layoutY="129.0" mnemonicParsing="false" text="Button" />
-            <Button layoutX="152.0" layoutY="129.0" mnemonicParsing="false" text="Button" />
-         </children>
-      </Pane>
    </children>
 </AnchorPane>
