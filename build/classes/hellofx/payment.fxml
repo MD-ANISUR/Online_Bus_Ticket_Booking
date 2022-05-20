@@ -4,37 +4,49 @@
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="358.0" prefWidth="627.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.Log_in_pageController">
+
+<AnchorPane id="AnchorPane" prefHeight="462.0" prefWidth="630.0" style="-fx-background-color: #00ffa7;" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17" fx:controller="hellofx.PaymentController">
    <children>
-      <Label layoutX="263.0" layoutY="49.0" text="Payment" textFill="RED">
+      <Label layoutX="243.0" layoutY="14.0" prefHeight="74.0" prefWidth="266.0" text="Payment" textFill="RED">
          <font>
-            <Font name="Britannic Bold" size="23.0" />
+            <Font name="Britannic Bold" size="33.0" />
          </font>
       </Label>
-      <VBox layoutX="179.0" layoutY="78.0" prefHeight="189.0" prefWidth="258.0">
+      <Pane layoutX="157.0" layoutY="80.0" prefHeight="301.0" prefWidth="278.0">
          <children>
-            <Label text="Name" textFill="#5e09fc" />
-            <TextField fx:id="email" />
-            <Label prefHeight="18.0" prefWidth="61.0" text="Email" textFill="#6405f2" />
-            <TextField fx:id="password" />
-            <VBox prefHeight="101.0" prefWidth="257.0">
-               <children>
-                  <Label text="Amount" textFill="#5e09fc" />
-                  <TextField fx:id="email1" />
-                  <Label prefHeight="18.0" prefWidth="61.0" text="Method" textFill="#6405f2" />
-                  <TextField fx:id="password1" />
-               </children>
-            </VBox>
+            <Label layoutX="14.0" layoutY="23.0" prefHeight="29.0" prefWidth="74.0" text="Name">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="90.0" prefHeight="17.0" prefWidth="52.0" text="Email">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="151.0" prefHeight="17.0" prefWidth="64.0" text="Amount">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="214.0" prefHeight="17.0" prefWidth="64.0" text="Method">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="name" layoutX="14.0" layoutY="52.0" prefHeight="25.0" prefWidth="259.0" />
+            <TextField fx:id="email" layoutX="14.0" layoutY="117.0" prefHeight="25.0" prefWidth="259.0" />
+            <TextField fx:id="amount" layoutX="14.0" layoutY="179.0" prefHeight="25.0" prefWidth="259.0" />
+            <TextField fx:id="method" layoutX="14.0" layoutY="242.0" prefHeight="25.0" prefWidth="259.0" />
          </children>
-      </VBox>
-      <Button layoutX="229.0" layoutY="301.0" mnemonicParsing="false" onAction="#SignInButton" prefHeight="26.0" prefWidth="154.0" style="-fx-background-color: #05890d;" text="Proceed" textFill="#fffe00">
+      </Pane>
+      <Button fx:id="proceedbtn" layoutX="244.0" layoutY="395.0" mnemonicParsing="false" onAction="#paymentPressed" style="-fx-background-color: green;" text="Make Payment" textFill="#dbef05">
          <font>
-            <Font name="Britannic Bold" size="15.0" />
-         </font></Button>
-      <HBox layoutY="-1.0" prefHeight="39.0" prefWidth="627.0" style="-fx-background-color: #0b75ef;" />
+            <Font size="13.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

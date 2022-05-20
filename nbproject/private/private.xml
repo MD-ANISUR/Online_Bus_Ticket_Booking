@@ -5,7 +5,10 @@
         <group>
             <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/HelloFX.java</file>
             <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/homeFXML.fxml</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/payment.fxml</file>
             <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/HomeFXMLController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/PaymentController.java</file>
+            <file>file:/C:/Users/Asus/OneDrive/Documents/NetBeansProjects/HelloFX/src/hellofx/Log_in_pageController.java</file>
         </group>
     </open-files>
 </project-private>
