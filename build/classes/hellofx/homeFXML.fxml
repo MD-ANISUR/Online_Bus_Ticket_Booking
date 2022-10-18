@@ -17,15 +17,29 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane id="AnchorPane" prefHeight="825.0" prefWidth="1239.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
+<AnchorPane id="AnchorPane" prefHeight="825.0" prefWidth="1000.0" style="-fx-background-color: #0af5d7;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hellofx.HomeFXMLController">
    <children>
-      <VBox layoutX="161.0" layoutY="90.0" prefHeight="167.0" prefWidth="189.0">
+      <ImageView fitHeight="907.0" fitWidth="1229.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@bus2.jpg" />
+         </image>
+      </ImageView>
+      <VBox layoutX="162.0" layoutY="89.0" prefHeight="167.0" prefWidth="275.0">
          <children>
-            <Label text="From" />
+            <Label prefHeight="28.0" prefWidth="66.0" text="From">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
             <ComboBox fx:id="source1" prefWidth="150.0" />
-            <Label text="To" />
+            <Label prefHeight="26.0" prefWidth="30.0" text="To">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font></Label>
             <ComboBox fx:id="dest1" prefWidth="150.0" />
-            <Label prefHeight="24.0" prefWidth="82.0" text="Journey Date" />
+            <Label prefHeight="24.0" prefWidth="105.0" text="Journey Date">
+               <font>
+                  <Font size="15.0" />
+               </font></Label>
             <DatePicker fx:id="date" />
          </children>
       </VBox>
@@ -38,7 +52,10 @@
             </Label>
          </children>
       </HBox>
-      <Button layoutX="161.0" layoutY="257.0" mnemonicParsing="false" onAction="#search" style="-fx-background-color: lime;" text="Find Bus" />
+      <Button layoutX="161.0" layoutY="257.0" mnemonicParsing="false" onAction="#search" prefHeight="35.0" prefWidth="97.0" style="-fx-background-color: lime;" text="Find Bus">
+         <font>
+            <Font name="System Bold" size="15.0" />
+         </font></Button>
       <TableView fx:id="tableview" layoutX="-1.0" layoutY="299.0" prefHeight="200.0" prefWidth="602.0">
         <columns>
           <TableColumn fx:id="service" prefWidth="131.20001828670502" text="Name" />
@@ -47,7 +64,7 @@
             <TableColumn fx:id="atime" prefWidth="158.39999389648438" text="Arrival Time" />
         </columns>
       </TableView>
-      <Pane layoutX="766.0" layoutY="104.0" prefHeight="727.0" prefWidth="304.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;" styleClass="t2" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css">
+      <Pane layoutX="760.0" layoutY="14.0" prefHeight="727.0" prefWidth="304.0" style="-fx-border-width: 5px; -fx-border-radius: 5px; -fx-background-radius: 5px;" styleClass="t2" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css">
          <children>
             <Button fx:id="bt_1" layoutX="24.0" layoutY="102.0" mnemonicParsing="false" onAction="#A1" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A1" />
             <Button fx:id="a2" layoutX="83.0" layoutY="102.0" mnemonicParsing="false" onAction="#A2" prefHeight="35.0" prefWidth="42.0" style="-fx-background-color: #39FF14;" stylesheets="@../../../JavaApplication14/src/JavaApplication14/styleSample.css" text="A2" />
@@ -116,35 +133,94 @@
             </DropShadow>
          </effect>
       </Pane>
-      <AnchorPane prefHeight="200.0" prefWidth="200.0" />
-      <Pane layoutX="22.0" layoutY="513.0" prefHeight="236.0" prefWidth="582.0">
+      <AnchorPane layoutX="1131.0" layoutY="3.0" prefHeight="826.0" prefWidth="108.0" />
+      <Pane layoutX="22.0" layoutY="513.0" prefHeight="236.0" prefWidth="729.0">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" prefHeight="18.0" prefWidth="42.0" text="Name" />
-            <TextField fx:id="txtname" layoutX="56.0" layoutY="11.0" />
-            <Label layoutX="13.0" layoutY="40.0" prefHeight="18.0" prefWidth="42.0" text="From" />
-            <Label fx:id="sourcelabel" layoutX="55.0" layoutY="33.0" prefHeight="32.0" prefWidth="175.0" />
-            <Label layoutX="13.0" layoutY="65.0" prefHeight="18.0" prefWidth="77.0" text="Bus Name" />
-            <Label fx:id="serlabel" layoutX="90.0" layoutY="65.0" prefHeight="18.0" prefWidth="159.0" />
-            <Label layoutX="13.0" layoutY="94.0" prefHeight="18.0" prefWidth="97.0" text="Number of seats" />
-            <TextField fx:id="txtseat" layoutX="110.0" layoutY="91.0" />
-            <Label layoutX="13.0" layoutY="120.0" prefHeight="18.0" prefWidth="68.0" text="Total Fare" />
-            <Label fx:id="totalfare" layoutX="81.0" layoutY="120.0" prefHeight="18.0" prefWidth="91.0" />
-            <Label layoutX="309.0" layoutY="17.0" prefHeight="18.0" prefWidth="97.0" text="Contact Number" />
-            <TextField fx:id="txtphone" layoutX="426.0" layoutY="13.0" />
-            <Label layoutX="309.0" layoutY="42.0" prefHeight="18.0" prefWidth="80.0" text="Destination" />
-            <Label fx:id="dlabel" layoutX="406.0" layoutY="35.0" prefHeight="32.0" prefWidth="175.0" />
-            <Label layoutX="309.0" layoutY="67.0" prefHeight="18.0" prefWidth="77.0" text="Date" />
-            <Label fx:id="datelabel" layoutX="386.0" layoutY="67.0" prefHeight="18.0" prefWidth="159.0" />
-            <Label layoutX="309.0" layoutY="95.0" prefHeight="18.0" prefWidth="77.0" text="Price" />
+            <Label layoutX="4.0" layoutY="18.0" prefHeight="28.0" prefWidth="68.0" text="Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <TextField fx:id="txtname" layoutX="90.0" layoutY="13.0">
+               <font>
+                  <Font size="17.0" />
+               </font></TextField>
+            <Label layoutX="8.0" layoutY="57.0" prefHeight="38.0" prefWidth="61.0" text="From" textFill="#fffff7">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="sourcelabel" layoutX="90.0" layoutY="58.0" prefHeight="32.0" prefWidth="175.0" textFill="#faf8f8">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="101.0" prefHeight="35.0" prefWidth="108.0" text="Bus Name" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Label fx:id="serlabel" layoutX="126.0" layoutY="103.0" prefHeight="35.0" prefWidth="169.0" textFill="#fff5f5">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="7.0" layoutY="138.0" prefHeight="38.0" prefWidth="150.0" text="Number of seats" textFill="#f7f4f4">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <TextField fx:id="txtseat" layoutX="185.0" layoutY="141.0" prefHeight="38.0" prefWidth="91.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextField>
+            <Label layoutX="4.0" layoutY="181.0" prefHeight="32.0" prefWidth="97.0" text="Total Fare" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="totalfare" layoutX="101.0" layoutY="178.0" prefHeight="47.0" prefWidth="108.0" textFill="#f7f1f1">
+               <font>
+                  <Font name="System Bold" size="19.0" />
+               </font></Label>
+            <Label layoutX="309.0" layoutY="17.0" prefHeight="37.0" prefWidth="149.0" text="Contact Number" textFill="#fcfbfb">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <TextField fx:id="txtphone" layoutX="471.0" layoutY="16.0" prefHeight="32.0" prefWidth="169.0">
+               <font>
+                  <Font size="19.0" />
+               </font></TextField>
+            <Label layoutX="305.0" layoutY="53.0" prefHeight="41.0" prefWidth="108.0" text="Destination" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="dlabel" layoutX="474.0" layoutY="60.0" prefHeight="41.0" prefWidth="175.0" textFill="#fcfafa">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="306.0" layoutY="95.0" prefHeight="35.0" prefWidth="77.0" text="Date" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label fx:id="datelabel" layoutX="470.0" layoutY="103.0" prefHeight="35.0" prefWidth="169.0" textFill="WHITE">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Label layoutX="306.0" layoutY="135.0" prefHeight="35.0" prefWidth="77.0" text="Price" textFill="#f7f5f5">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
 
-            <Label layoutX="378.0" layoutY="94.0" prefHeight="18.0" prefWidth="159.0" />
+            <Label layoutX="474.0" layoutY="100.0" prefHeight="41.0" prefWidth="159.0" textFill="#f7f1f1">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
 
-            <Label fx:id="flabel" layoutX="379.0" layoutY="95.0" prefHeight="19.0" prefWidth="158.0" />
-            <Button fx:id="rset" layoutX="291.0" layoutY="138.0" mnemonicParsing="false" onAction="#rset" text="Reset" />
-            <Button fx:id="proceed" layoutX="415.0" layoutY="138.0" mnemonicParsing="false" onAction="#proceed" text="Checkout" />
-            <Button fx:id="book" layoutX="360.0" layoutY="138.0" mnemonicParsing="false" onAction="#bookticket" text="Book" />
-            <Button fx:id="cancel" layoutX="494.0" layoutY="138.0" mnemonicParsing="false" text="Cancel" />
-            <Button fx:id="reset" layoutX="221.0" layoutY="138.0" mnemonicParsing="false" text="Refresh" />
+            <Label fx:id="flabel" layoutX="475.0" layoutY="140.0" prefHeight="35.0" prefWidth="158.0" textFill="#faf5f5">
+               <font>
+                  <Font size="19.0" />
+               </font></Label>
+            <Button fx:id="rset" layoutX="300.0" layoutY="197.0" mnemonicParsing="false" onAction="#rset" prefHeight="35.0" prefWidth="66.0" style="-fx-background-color: green;" text="Reset" textFill="#faf6f6" />
+            <Button fx:id="proceed" layoutX="458.0" layoutY="197.0" mnemonicParsing="false" onAction="#proceed" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: orange;" text="Checkout" />
+            <Button fx:id="book" layoutX="383.0" layoutY="197.0" mnemonicParsing="false" onAction="#bookticket" prefHeight="35.0" prefWidth="61.0" style="-fx-background-color: yellow;" text="Book" textFill="#0d0d0d" />
+            <Button fx:id="reset" layoutX="210.0" layoutY="197.0" mnemonicParsing="false" onAction="#refresh" prefHeight="35.0" prefWidth="77.0" style="-fx-background-color: lime;" text="Refresh" textFill="#f4f2f2">
+               <font>
+                  <Font size="15.0" />
+               </font></Button>
 
          </children>
       </Pane>

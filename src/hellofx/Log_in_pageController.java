@@ -39,7 +39,7 @@ import java.util.logging.Logger;
 public class Log_in_pageController implements Initializable {
     
         @FXML private TextField email;
-        @FXML private TextField password;
+        @FXML private PasswordField password;
         ResultSet resultSet = null;
         PreparedStatement pst = null;
     

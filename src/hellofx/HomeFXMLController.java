@@ -157,15 +157,15 @@ public class HomeFXMLController implements Initializable {
     @FXML
     private Button proceed;
     
-    public void s(String st){
+    public void s(String st){ //setting the name of the service
         this.x=st;
     }
      public void fare(String f){this.farex=f;}
     
     @FXML
     void A1(ActionEvent event)  {
-        String service1 = x;
-        if(x==null){
+        String service1 = x; //service assigning
+        if(x==null){ //no service selected
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setAlertType(Alert.AlertType.WARNING);
             alert.setContentText("Select a bus first!");
@@ -178,7 +178,7 @@ public class HomeFXMLController implements Initializable {
                 ResultSet r = ps1.executeQuery();
                 r.next();
                 int s = r.getInt(1);
-                if (s == 1) {
+                if (s == 1) { //seat is already selected
                     Alert alert = new Alert(Alert.AlertType.WARNING);
                     alert.setAlertType(Alert.AlertType.WARNING);
                     alert.setContentText("oops! The seat is booked already. Select another");
@@ -187,7 +187,7 @@ public class HomeFXMLController implements Initializable {
                 } else {
                     bt_1.setOnAction(e -> {
                         bta1 = true;
-                        seatCounta = 1;
+                        seatCounta = 1; //counting the seat for booking
                         bt_1.setStyle(yellow);
                         txtseat.setText(String.valueOf(seatCounta+seatCountb+seatCountc+seatCountd+seatCounte+seatCountf+seatCountg+seatCounth+
                                 seatCounti+seatCountj+seatCountk+seatCountl+seatCountm+seatCountn+seatCounto+seatCountp));
@@ -730,7 +730,7 @@ public class HomeFXMLController implements Initializable {
     @FXML
     void d3(ActionEvent event) {
         String service1 = x;
-        if(x==null){
+        if(x==null){ //If service not selected
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setAlertType(Alert.AlertType.WARNING);
             alert.setContentText("Select a bus first!");
@@ -743,7 +743,7 @@ public class HomeFXMLController implements Initializable {
                 PreparedStatement ps1 = connection.prepareStatement("select count from seats WHERE seatname='D3' and service='" + service1 + "'");
                 ResultSet r = ps1.executeQuery();
                 r.next() ;
-                int s = r.getInt(1);
+                int s = r.getInt(1); //Extracting the seat value 0 or 1
                 if(s == 1){ Alert alert = new Alert(Alert.AlertType.WARNING);
                     alert.setAlertType(Alert.AlertType.WARNING);
                     alert.setContentText("oops! The seat is booked already. Select another");
@@ -753,6 +753,7 @@ public class HomeFXMLController implements Initializable {
                         bta2 = true;
                         seatCounto = 1;
                         D3.setStyle(yellow);
+                        //Below code is for finding the total number of seat user selected
                         txtseat.setText(String.valueOf(seatCounta+seatCountb+seatCountc+seatCountd+seatCounte+seatCountf+seatCountg+seatCounth+
                                 seatCounti+seatCountj+seatCountk+seatCountl+seatCountm+seatCountn+seatCounto+seatCountp));
 
@@ -829,6 +830,7 @@ public class HomeFXMLController implements Initializable {
         dest1.getItems().add("Sylhet");
         dest1.getItems().add("Khulna");
         dest1.getItems().add("Rajshahi");
+        dest1.getItems().add("Chittagong");
         
         //connect();
         setcellvalue();
@@ -878,21 +880,22 @@ public class HomeFXMLController implements Initializable {
         }
     } 
     
-        public void setcellvalue(){
-
+        public void setcellvalue(){ //this function set the details of journey like bus name, date, source dest and checks whether
+                                    //the seat is booked or not to show the red column
         String service1 = x;
         tableview.setOnMouseClicked(e-> {
 
 
             Service service = tableview.getItems().get(tableview.getSelectionModel().getSelectedIndex());
             System.out.println(service.getSource());
+            //setting the service name, date etc thing to the view
             sourcelabel.setText(service.getSource());
             serlabel.setText(service.getService());
             dlabel.setText(service.getDestination());
             flabel.setText(String.valueOf(service.getFare()));
             datelabel.setText(String.valueOf(service.getDt()));
             String srvc = service.getService();
-            s(srvc);
+            s(srvc); //setting the service provider name
 
             ConnectionClass connectionClass = new ConnectionClass();
             Connection connection = connectionClass.getConnection();
@@ -902,12 +905,13 @@ public class HomeFXMLController implements Initializable {
 
                 ResultSet resultSet = pst.executeQuery();
 
-
+                //adding the query result to a list
                 while (resultSet.next()){
                     list.add(resultSet.getInt(1));
 
 
                 }
+                //if the seat value is 1(booked) then seat color is red
                 if(list.get(0)==1){
                     bt_1.setStyle("-fx-background-color:red");
                 }
@@ -1325,6 +1329,24 @@ public class HomeFXMLController implements Initializable {
 
         try {
             Parent parent = FXMLLoader.load(getClass().getResource("payment.fxml"));
+            Scene scene = new Scene(parent);
+            Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
+            window.setScene(scene);
+            window.show();
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+        
+        public void refresh(ActionEvent actionEvent) {
+
+
+
+
+        try {
+            Parent parent = FXMLLoader.load(getClass().getResource("homeFXML.fxml"));
             Scene scene = new Scene(parent);
             Stage window = (Stage)((Node) actionEvent.getSource()).getScene().getWindow();
             window.setScene(scene);
